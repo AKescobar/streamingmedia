@@ -1,3 +1,4 @@
+/*Root*/
 :root{
     --fed-blue: #020659;
     --navy: #020873;
@@ -10,3 +11,18 @@
     --fonts: Verdana, 'Geneva', Tahoma, sans-serif; 
 }
 
+/*Whole Document and Multi Selectors*/
+html{
+    background-color: var(--fed-blue);
+}
+
+/*Header*/
+
+
+/*Body*/
+body{
+    margin: 0 auto;
+    
+}
+
+/*Footer*/
