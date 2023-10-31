@@ -112,7 +112,7 @@ nav a{
 }
 
 nav a:hover{
-    background-color: var(--tyrian);
+    background: var(--tyrian);
     display: block;
 }
 
@@ -227,6 +227,10 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     }
     label span, input {
         display: none;
+    }
+
+    nav{
+        padding: 0 0 0.75rem;
     }
 
     #playlists .scroll section, #curated .scroll section{
