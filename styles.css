@@ -72,6 +72,11 @@ header, nav, main, footer{
     width: 375px;
 }
 
+h1{
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
 h2, h3{
     font-weight: bold;
     font-size: 1em;
@@ -82,22 +87,20 @@ p, dt, dd{
 }
 
 /*----------Header----------*/
+
+#switch{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
 header{
     color: white;
+    background-color: var(--chrysler);
+    background-image: linear-gradient(to right, var(--chrysler), black);
 }
 
 nav{
-    background-color: var(--marine);
-    top: 0;
-}
-
-nav ul{
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    gap: .5rem;
     background-color: var(--marine);
 }
 
@@ -127,17 +130,10 @@ img{
     color: var(--tyrian);
 }
 
-#playlists .scroll, #curated .scroll{
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-    padding: 1rem;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    row-gap: 1rem;
-}
-
 #playlists dl, #playlists img{
     background-color: var(--dodger);
     display: block;
+    text-align: center;
 }
 
 #curated .scroll{
@@ -151,6 +147,7 @@ img{
 #curated dl, #curated img{
     background-color: var(--navy);
     display: block;
+    text-align: center;
 }
 
 
@@ -213,15 +210,51 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 }
 
 @media screen and (min-width:834px) {
+    header, nav, main, footer{
+        margin: 0 auto;
+        align-content: center;
+        width: 834px;
+    }
     ul {
         overflow: visible;
         position: absolute;
         top: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        background-color: var(--marine);
+        width: 834px;
+        align-items: center;
+        justify-items: center;
     }
     label span, input {
         display: none;
+    }
+
+    #playlists .scroll section, #curated .scroll section{
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        padding: .5rem;
+        grid-template-rows: 1fr;
+    }
+    #lists{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    } 
+}
+
+@media screen and (max-width:834px){
+    #playlists .scroll, #curated .scroll{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 15px;
+        padding: 1rem;
+    }
+
+    #playlists dl, #playlists img{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #curated dl, #curated img, #playlists dl, #playlists img{
+        height: 118px;
     }
 }
