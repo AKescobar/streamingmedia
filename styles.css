@@ -93,7 +93,6 @@ p, dt, dd{
     flex-direction: column-reverse;
 }
 
-
 header{
     color: white;
     background-color: var(--chrysler);
@@ -102,6 +101,21 @@ header{
 
 nav{
     background-color: var(--marine);
+    display: flex;
+    flex-direction: row;
+}
+
+ul li:nth-of-type(2), ul li:nth-of-type(3), ul li:nth-of-type(4){
+    text-transform: uppercase;
+}
+
+nav img{
+    position: relative;
+    top: -10px;
+}
+
+nav h2{
+    display: none;
 }
 
 nav a{
@@ -116,6 +130,12 @@ nav a:hover{
     display: block;
 }
 
+ul li:first-of-type{
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
 /*----------Main----------*/
 main, footer{
     background-color: white;
@@ -124,6 +144,21 @@ main, footer{
 
 img{
     padding: 10px;
+}
+
+audio{
+    position: relative;
+    left: 15px;
+    bottom: 215px;
+}
+
+#trending .scroll{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#trending section{
+
 }
 
 #trending dt, #trending dd{
@@ -150,11 +185,48 @@ img{
     text-align: center;
 }
 
-
 /*----------Footer----------*/
 
 
 /*----------Media Queries and Provided Code----------*/
+
+audio::-webkit-media-controls-mute-button {
+
+}
+audio::-webkit-media-controls-play-button {
+
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: whitesmoke;
+    opacity: 0.8;
+}
+
+
+#trending ::-webkit-scrollbar {
+
+}
+#trending ::-webkit-scrollbar-track {
+
+}
+#trending ::-webkit-scrollbar-thumb {
+
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+
+}
+
 ul {
     overflow: hidden;
     max-height: 0;
@@ -166,6 +238,7 @@ label {
     padding: 28px 20px;
     position: relative;
     user-select: none;
+    z-index: 1;
 }
 label span {
     background-color: #ffffff;
@@ -222,7 +295,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         width: 834px;
-        align-items: center;
+        align-items: start;
         justify-items: center;
     }
     label span, input {
@@ -246,6 +319,23 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 }
 
 @media screen and (max-width:834px){
+    ul li:first-of-type{
+        font-variant: small-caps;
+        font-weight: bold;
+        position: absolute;
+        z-index: 2;
+    }
+
+    ul li:nth-of-type(2), ul li:nth-of-type(3), ul li:nth-of-type(4), ul li:nth-of-type(5){
+        position: relative;
+        top: 35px;
+    }
+
+    nav a img {
+        position: relative;
+        top: -20px;
+    }
+
     #playlists .scroll, #curated .scroll{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
