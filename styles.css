@@ -75,11 +75,17 @@ header, nav, main, footer{
 h1{
     font-weight: bold;
     font-size: 1.25em;
+    padding: .5rem;
 }
 
 h2, h3{
     font-weight: bold;
     font-size: 1em;
+    padding: .5rem;
+}
+
+h2{
+    padding-left: 1.75rem;
 }
 
 p, dt, dd{
@@ -128,6 +134,7 @@ nav a{
 nav a:hover{
     background: var(--tyrian);
     display: block;
+    overflow: hidden;
 }
 
 ul li:first-of-type{
@@ -152,17 +159,54 @@ audio{
     bottom: 215px;
 }
 
+.more{
+    background-color: var(--tyrian);
+    display: block;
+    padding: 0.7rem;
+    width: 150px;
+}
+
+#trending{
+    padding: 1.25rem 0;
+}
+
+#trending h2{
+    position: relative;
+    top: 15px;
+}
+
+#trending h3{
+    position: relative;
+    left: -8px;
+}
+
 #trending .scroll{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 350px;
+    align-items: center;
 }
 
-#trending section{
+#trending section div{
+    position: relative;
+    top: 321px;
+    left: 10px;
+    padding: 15px;
+    background-color: rgb(240, 240, 240, .7);
+    width: 281px;
+}
 
+#trending dl{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
 }
 
 #trending dt, #trending dd{
     color: var(--tyrian);
+}
+
+#lists{
+    padding: 1.25rem 0;
 }
 
 #playlists dl, #playlists img{
@@ -191,14 +235,19 @@ audio{
 /*----------Media Queries and Provided Code----------*/
 
 audio::-webkit-media-controls-mute-button {
-
+    color: #000;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
 }
 audio::-webkit-media-controls-play-button {
-
+    color: #000;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: relative;
 }
 audio::-webkit-media-controls-enclosure {
-    background-color: whitesmoke;
-    opacity: 0.8;
+    background-color: rgb(240, 240, 240, .7);
 }
 
 
@@ -316,6 +365,9 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         display:grid;
         grid-template-columns: 1fr 1fr;
     } 
+    nav a:nth-of-type(5){
+        padding: 0 1.2rem;
+    }
 }
 
 @media screen and (max-width:834px){
