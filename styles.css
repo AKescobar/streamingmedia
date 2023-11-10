@@ -94,7 +94,7 @@ h2{
 }
 
 h3{
-    padding: 10px;
+    padding: 0 10px 10px;
 }
 
 p, dt, dd{
@@ -481,6 +481,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         column-gap: 15px;
         padding: 1rem;
+
     }
 
     #playlists dl, #playlists img{
@@ -488,7 +489,12 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         flex-direction: column;
     }
 
-    #curated dl, #curated img, #playlists dl, #playlists img{
-        height: 118px;
+    .scroll p{
+        padding: 2px 0 5px;
+    }
+
+    #playlists section, #curated section{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
     }
 }
