@@ -103,12 +103,12 @@ p, dt, dd{
 }
 
 /*--------------------Header--------------------*/
-#switch{
+header{
     display: flex;
     flex-direction: column-reverse;
 }
 
-header{
+header section{
     color: white;
     background-color: var(--chrysler);
     background-image: linear-gradient(to right, var(--chrysler), black);
