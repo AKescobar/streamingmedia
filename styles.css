@@ -231,6 +231,10 @@ audio{
     width: 281px;
 }
 
+#trending section img{
+    margin: 10px;
+}
+
 #trending dl{
     display: grid;
     grid-template-columns: 1fr 4fr;
